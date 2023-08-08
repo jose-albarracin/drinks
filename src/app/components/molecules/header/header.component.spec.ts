@@ -1,14 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
+  const activatedRouteMock = {
+    paramMap: of({ get: (key: string) => '1' }),
+  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      declarations: [HeaderComponent],
+      imports: [RouterModule],
+      providers: [{ provide: ActivatedRoute, useValue: activatedRouteMock }],
     });
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

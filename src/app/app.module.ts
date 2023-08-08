@@ -10,6 +10,7 @@ import { GridCocktailsComponent } from './components/organisms/grid-cocktails/gr
 import { HomeComponent } from './components/pages/home/home.component';
 import { CocktailDetailsComponent } from './components/pages/cocktail-details/cocktail-details.component';
 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +19,10 @@ import { CocktailDetailsComponent } from './components/pages/cocktail-details/co
     CocktailPreviewComponent,
     GridCocktailsComponent,
     HomeComponent,
-    CocktailDetailsComponent
+    CocktailDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

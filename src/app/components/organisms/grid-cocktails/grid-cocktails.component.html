@@ -1,1 +1,9 @@
-<p>grid-cocktails works!</p>
+<ul class="flex flex-wrap justify-center gap-3">
+  <li *ngFor="let cocktail of cocktails">
+    <app-cocktail-preview
+      [routerLink]="'detail/' + cocktail.idDrink"
+      [image]="cocktail.strDrinkThumb + '/preview'"
+      [name]="cocktail.strDrink"
+    ></app-cocktail-preview>
+  </li>
+</ul>

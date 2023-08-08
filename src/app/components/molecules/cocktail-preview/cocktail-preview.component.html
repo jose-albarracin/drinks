@@ -1,1 +1,15 @@
-<p>cocktail-preview works!</p>
+<div
+  class="flex flex-col items-center p-3 border-2 shadow-lg hover:bg-slate-400 transition-all cursor-pointer"
+>
+  <img
+    *ngIf="image"
+    loading="lazy"
+    class="w-full h-fit"
+    [src]="image"
+    alt=""
+    width="200"
+    height="200"
+  />
+  <div *ngIf="!image" class="loader"></div>
+  <span class="text-lg font-semibold pt-3">{{ name }}</span>
+</div>

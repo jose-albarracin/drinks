@@ -1,1 +1,31 @@
-<p>cocktail-details works!</p>
+<app-layout>
+  <div class="container max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4 text-center md:text-left">
+      {{ cocktail?.strDrink ?? "" }}
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="flex flex-col col-span-1 gap-y-4">
+        <div class="flex flex-col">
+          <span class="text-lg text-gray-500 font-semibold">Categoría</span>
+          <p class="ml-3 text-gray-400">
+            {{ cocktail?.strCategory ?? "" }}
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg text-gray-500 font-semibold">Instrucciones</span>
+          <p class="ml-3 text-gray-400">
+            {{ cocktail?.strInstructionsES ?? "" }}
+          </p>
+        </div>
+      </div>
+      <div class="col-span-1">
+        <img
+          class="w-full h-fit border-2 p-3"
+          [src]="cocktail?.strDrinkThumb ?? ''"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</app-layout>

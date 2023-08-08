@@ -1,1 +1,24 @@
-<p>header works!</p>
+<nav class="flex w-full flex-col items-center py-6">
+  <div class="flex items-center mb-3 cursor-pointer" routerLink="/">
+    <img
+      class="w-[120px] h-fit"
+      src="assets/images/logo.png"
+      height="680"
+      width="663"
+      alt=""
+      srcset=""
+    />
+
+    <span class="text-3xl font-bold">The Cocktails</span>
+  </div>
+  <ul class="flex gap-x-6 container justify-center border-b-2">
+    <li
+      routerLink="/"
+      class="text-base py-3 px-4 font-semibold cursor-pointer"
+      routerLinkActive="bg-gradient-to-t  from-slate-200 to-white border-b-2 border-slate-900"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </li>
+  </ul>
+</nav>

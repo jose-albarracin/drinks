@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsApiService } from '../../../services/cocktails-api.service';
 
+import { Cocktail } from '../../../interface/cocktails.interface';
+
 @Component({
   selector: 'app-grid-cocktails',
   templateUrl: './grid-cocktails.component.html',
   styleUrls: ['./grid-cocktails.component.scss'],
 })
 export class GridCocktailsComponent implements OnInit {
-  cocktails: any = [];
+  cocktails: Cocktail[] = [];
   constructor(private cocktailsApi: CocktailsApiService) {}
 
   ngOnInit(): void {

@@ -12,7 +12,7 @@ describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
   const activatedRouteMock = {
-    paramMap: of({ get: (key: string) => '1' }),
+    paramMap: of({ get: () => '1' }),
   };
 
   beforeEach(async () => {

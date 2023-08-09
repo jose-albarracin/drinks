@@ -8,7 +8,7 @@ describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   const activatedRouteMock = {
-    paramMap: of({ get: (key: string) => '1' }),
+    paramMap: of({ get: () => '1' }),
   };
 
   beforeEach(() => {

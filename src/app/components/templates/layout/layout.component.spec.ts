@@ -9,7 +9,7 @@ describe('LayoutComponent', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
   const activatedRouteMock = {
-    paramMap: of({ get: (key: string) => '1' }),
+    paramMap: of({ get: () => '1' }),
   };
 
   beforeEach(() => {
